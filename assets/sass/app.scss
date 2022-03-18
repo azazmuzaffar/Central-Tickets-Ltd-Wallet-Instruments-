@@ -973,6 +973,12 @@ body {
 /* Header Dropdown */
 .dropdown-area {
   position: relative;
+  &.-desktop {
+    display: block;
+  }
+  &.-mobile {
+    display: none;
+  }
 }
 .dropdown--call {
   background: white;
@@ -1045,6 +1051,91 @@ body {
   }
   &.active {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dropdown-area {
+    position: relative;
+    overflow: visible;
+    &.-desktop {
+      display: none;
+    }
+    &.-mobile {
+      display: block;
+    }
+  }
+  .dropdown--call {
+    border-radius: 22px;
+    border: 1px solid black;
+    padding: 0px 10px 0px 6px;
+    margin: 5px 0px 10px 0px;
+    img {
+      height: 18px;
+      padding: 0px 0px;
+    }
+    .-line {
+      height: 34px;
+      margin: 0px 8px 0px 13px;
+    }
+    .-text {
+      span {
+        font: normal normal bold 15px/24px Arial;
+        margin: 0;
+        svg {
+          margin-left: 0px;
+          margin-right: 3px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  .dropdown-- {
+    right: 182px;
+    top: 36px;
+    padding: 13px 12px;
+    z-index: 9999;
+    width: 153px;
+    position: absolute;
+    display: none;
+    background: white;
+    border-radius: 0px;
+    margin-top: 10px;
+    box-shadow: 0px 1px 6px #00000034;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        a {
+          padding: 0;
+          text-align: left;
+          color: #000;
+          background: #fff;
+          margin-bottom: 13px;
+          font-size: 14px;
+          &:hover {
+            color: #000;
+          }
+          &.active {
+            display: block;
+            height: 34px;
+            font: normal normal bold 16px/33px Arial;
+            text-decoration: none;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0px;
+            color: #ffffff;
+            border-radius: 20px;
+            background: #ff0100;
+            margin-bottom: 13px;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

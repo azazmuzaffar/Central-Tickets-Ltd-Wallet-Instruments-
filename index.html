@@ -233,8 +233,7 @@
         background-color: #f5f5f5;
       }
     </style>
-
-    <div class="container-fluid header-border blackk" style="width: 100%" id="mainheader">
+    <div class="container-fluid header-border blackk" style="width: 100%;" id="mainheader">
       <div class="container header-pos">
         <div class="col-md-12 col-xs-12 col-sm-12 paddXsZ">
           <div class="col-md-3 col-sm-3 col-xs-12 paddXsZ navbar-header">
@@ -246,7 +245,7 @@
                 style="width: 250px"
               />
             </a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-tg" aria-expanded="false">
+            <button id="dropnone" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-tg" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -258,6 +257,32 @@
               <ul class="nav navbar-nav pull-right" style="">
                 <!--li class=""><a  href="https://centraltickets.co.uk/" style="text-transform: none !important; ">Home </a></li-->
                 <!--<li><a  href="http://centraltickets.entstix.com/" target="_blank" style="text-transform: none !important; ">West end deals  </a></li>-->
+                <li>
+                  <div class="dropdown-area -mobile">
+                    <div class="dropdown--call">
+                      <div class="-text">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14.669" height="6.75" viewBox="0 0 12.669 8.75">
+                            <path
+                              id="Path_1"
+                              data-name="Path 1"
+                              d="M0,0,5.92,5.922,11.841,0"
+                              transform="translate(1.414 1.414)"
+                              fill="none"
+                              stroke="#363535"
+                              stroke-linecap="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                          £100.30
+                        </span>
+                      </div>
+                      <div class="-line"></div>
+                      <img src="./assets/img/small-wallet-b.svg" alt="" />
+                    </div>
+                  
+                  </div>
+                </li>
                 <li class="">
                   <a href="https://centraltickets.co.uk/Home/allevent" style="text-transform: none !important">Current Listings</a>
                 </li>
@@ -339,7 +364,7 @@
                   </ul>
                 </li>
                 <li>
-                  <div class="dropdown-area">
+                  <div class="dropdown-area -desktop">
                     <div class="dropdown--call">
                       <img src="./assets/img/small-wallet-b.svg" alt="" />
                       <div class="-line"></div>
@@ -375,6 +400,21 @@
                       </ul>
                     </div>
                   </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown-area -mobile">
+            <div class="dropdown--">
+              <ul>
+                <li>
+                  <a href="#" class="active">Top Up</a>
+                </li>
+                <li>
+                  <a href="#">History</a>
+                </li>
+                <li>
+                  <a href="#">Learn More</a>
                 </li>
               </ul>
             </div>
