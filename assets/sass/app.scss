@@ -1139,6 +1139,219 @@ body {
   }
 }
 
+#mobileheader {
+  display: none;
+}
+@media only screen and (max-width: 767.98px) {
+  #mainheader {
+    display: none;
+  }
+  #mobileheader {
+    display: block;
+  }
+}
+
+/* Mobile Header */
+.navbar {
+  &.mobile-header {
+    width: 100%;
+    height: 94px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    background: #363535;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    border-radius: 0px;
+    a {
+      img {
+        height: 37px;
+        @media only screen and (max-width: 767.98px) {
+          height: 30px;
+        }
+      }
+    }
+    .menu-toggle {
+      position: absolute;
+      right: 1.5rem;
+      top: 49%;
+      transform: translate(0, -50%);
+      height: 26px;
+      width: 29px;
+
+      &,
+      &:hover {
+        color: #000;
+      }
+    }
+    .menu-toggle-bar {
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      right: 2px;
+      width: 100%;
+      height: 2px;
+      border-radius: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+      &.menu-toggle-bar--top {
+        transform: translate(0, -8px);
+      }
+      &.menu-toggle-bar--bottom {
+        transform: translate(0, 8px);
+      }
+    }
+    .menu-toggle {
+      &.nav-open {
+        .menu-toggle-bar {
+          &.menu-toggle-bar--top {
+            transform: translate(0, 0) rotate(45deg);
+          }
+          &.menu-toggle-bar--middle {
+            opacity: 0;
+          }
+          &.menu-toggle-bar--bottom {
+            transform: translate(0, 0) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+/* Header Body */
+.-header-body {
+  display: none;
+  &.opened {
+    display: block;
+  }
+  p,
+  span,
+  a,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  height: 100%;
+  width: 100%;
+  background: #363535;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 64px 16px 0px 16px;
+  .head-- {
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 4px;
+    margin: 34px 0px 22px 0px;
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: white;
+      svg {
+        margin-right: 6px;
+      }
+    }
+  }
+  .left-right-listing {
+    display: flex;
+    align-items: flex-start;
+    .left-listing,
+    .right-listing {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          margin: 0;
+          margin-bottom: 11px;
+          &:last-of-type {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      a,
+      li {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #fff;
+        line-height: 21px;
+        text-decoration: none;
+      }
+      a,
+      ul {
+        display: block;
+        width: 160px;
+        margin-right: 29px;
+      }
+    }
+  }
+}
+.--your-wallet {
+  .left-right-listing {
+    .left-listing,
+    .right-listing {
+      span {
+        a {
+          text-decoration: none;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #fff;
+          font-weight: bold;
+          font-size: 18px;
+          padding: 5px 18px;
+          background: white;
+          border-radius: 12px;
+          display: flex;
+          width: fit-content;
+          margin-bottom: 17px;
+        }
+      }
+    }
+    .left-listing {
+      span {
+        a {
+          color: #363535;
+          line-height: 30px;
+          padding: 1.5px 18px;
+        }
+      }
+    }
+    .right-listing {
+      span {
+        a {
+          color: #fff;
+          background: #ff0100;
+          padding: 6px 23px;
+        }
+      }
+    }
+  }
+}
+.log-out-- {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid #ff0100;
+  border-radius: 12px;
+  display: block;
+  width: fit-content;
+  padding: 6px 23px !important;
+  margin-top: 47px !important;
+  margin-bottom: 32px !important;
+}
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<< */

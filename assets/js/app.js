@@ -59,6 +59,12 @@ $(document).ready(function () {
   });
 });
 
+/* Mobile Header */
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  $(this).toggleClass("nav-open");
+  $(".-header-body").toggleClass("opened");
+});
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<< */
