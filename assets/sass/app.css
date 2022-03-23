@@ -746,6 +746,10 @@ body {
   border: 1px solid #363535;
 }
 
+.-pop-up-wallet .-wallet .-transections .-content .-transection-n:last-of-type {
+  margin-bottom: 58px;
+}
+
 .-pop-up-wallet .-wallet .-transections .-content .-transection-n .card-credit-detail {
   display: -webkit-box;
   display: -ms-flexbox;

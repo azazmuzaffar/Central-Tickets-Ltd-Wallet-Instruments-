@@ -608,6 +608,9 @@ body {
             background: white;
             border: 1px solid #363535;
           }
+          &:last-of-type {
+            margin-bottom: 58px;
+          }
           .card-credit-detail {
             display: flex;
             align-items: flex-start;
